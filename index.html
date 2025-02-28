@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WareSpace - Upper West Side</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .top-fold {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 100vh;
+            background-image: url('https://source.unsplash.com/1600x900/?warehouse,storage');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            color: #fff;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px;
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            max-width: 500px;
+            color: #333;
+        }
+
+        .content h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #007b3e;
+        }
+
+        .content p {
+            font-size: 18px;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .form-container input,
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="top-fold">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="content">
+                <h1>Small Warehouse Spaces for Rent in Upper West Side, Atlanta, GA</h1>
+                <p>Flexible spaces with short-term leases, fully equipped for your business needs.</p>
+                <ul class="features">
+                    <li>✅ Flexible spaces & leases</li>
+                    <li>✅ All-inclusive warehousing</li>
+                    <li>✅ Immediate availability</li>
+                </ul>
+            </div>
+            <div class="form-container">
+                <form id="contact-form">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Phone Number" required>
+                    <button type="submit">Step 2: Find a time that works</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#contact-form').on('submit', function (event) {
+                event.preventDefault();
+                alert('Form submitted successfully!');
+            });
+        });
+    </script>
+</body>
+
+</html>
